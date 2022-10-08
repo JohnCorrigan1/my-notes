@@ -4,4 +4,11 @@
 
 body{
   margin: 0;
+  max-height: 100vh;
+}
+
+html {
+  margin: 0;
+  max-height: 100vh;
+  height: 100%;
 }

@@ -3,14 +3,15 @@ import Card from './Card'
 import puzzle from './../../assets/puzzle.jpg'
 import notes from './../../assets/notes.png'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className='flex gap-10 justify-center h-full mt-10'>
         <Card 
         title="Components" 
         img={puzzle}
         description="Custom react components with basic styling using tailwind css."
-        button="View Components"/>
+        button="View Components"
+        setSelectedPage={props.setSelectedPage}/>
         <Card 
         title="General Notes"
         img={notes}
