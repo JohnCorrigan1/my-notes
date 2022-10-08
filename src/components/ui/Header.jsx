@@ -11,7 +11,7 @@ export default function Header(props) {
   }
 
   return (
-    <div className='p-2 bg-rose-200'>
+    <div className='p-3 bg-rose-200'>
         <nav className='flex justify-between mr-5 ml-5'>   
         <h1 onClick={goHome} className='text-2xl hover:font-bold hover:cursor-pointer'>My Notes and Components</h1>
         <ul className='flex gap-10'>

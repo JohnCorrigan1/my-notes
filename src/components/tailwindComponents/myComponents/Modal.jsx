@@ -28,8 +28,9 @@ return (
 
 export default function Modal() {
   return (
-    <div className='flex justify-center flex-col'>
+    <div className='flex justify-center flex-col' id="modal">
       
+
         <Block 
         code={modal}
         language='jsx'

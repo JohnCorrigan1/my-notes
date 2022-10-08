@@ -1,5 +1,9 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import Modal from '../tailwindComponents/myComponents/Modal'
+import NavBar from '../tailwindComponents/myComponents/NavBar'
+
 
 export default function Sidebar(props) {
 
@@ -7,43 +11,38 @@ export default function Sidebar(props) {
         props.setSelectedPage(null)
     }
 
-  return (
-   
+    return (
+
         <div className="drawer drawer-mobile">
-  <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-  <div className=" drawer-content overflow-visible flex flex-col p-5">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className=" drawer-content overflow-visible flex flex-col p-5">
 
 
-    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-    <Modal />
+                <div id='top' className='flex justify-center'> <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label></div>
+                <Modal />
+                <NavBar />
 
-  </div> 
-  <div className="drawer-side ">
-    <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-    <ul className="menu flex-nowrap p-4 overflow-y-scroll overflow-x-hidden w-80 text-base-content bg-slate-400 gap-3">
-    <div className='p-2'><button onClick={homeHandler} className='btn w-full' >Home</button></div>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 1</a></li>
-      <li><a className='bg-base-100 hover:bg-base-200'>Sidebar Item 2</a></li>
-    </ul>
-  
-  </div>
-</div>
-   
-  )
+                <BrowserRouter>
+                    <HashLink to="#top" smooth>
+                        <button className='btn bottom-5 fixed right-5'>To Top</button>
+                    </HashLink>
+                </BrowserRouter>
+
+            </div>
+            <div className="drawer-side ">
+
+                <label id="top" htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                <BrowserRouter >
+                    <ul className="menu flex-nowrap p-4 overflow-y-scroll overflow-x-hidden w-80 text-base-content bg-slate-400 gap-3">
+                        <div className='p-2'><button onClick={homeHandler} className='btn w-full' >Home</button></div>
+                        <li><HashLink to="#modal" smooth className='bg-base-100 hover:bg-base-200'>Modal</HashLink></li>
+                        <li><HashLink to="#nav" smooth className='bg-base-100 hover:bg-base-200'>Nav Bar</HashLink></li>
+                        <li><HashLink to="#top" smooth className='bg-base-100 hover:bg-base-200'>Update Me</HashLink></li>
+                        <li><HashLink to="#" smooth className='bg-base-100 hover:bg-base-200'>Update Me</HashLink></li>
+                    </ul>
+                </BrowserRouter>
+            </div>
+        </div>
+
+    )
 }

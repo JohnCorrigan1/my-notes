@@ -1,5 +1,4 @@
 import { CopyBlock, dracula } from "react-code-blocks";
-import { CodeBlock, nord } from 'react-code-blocks';
 
 
 export default function Block(props) {
