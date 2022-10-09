@@ -1,16 +1,16 @@
 import React from 'react'
 import Block from '../Block'
 
-const code = `<div className='p-3 bg-rose-200'>
-    <nav className='flex justify-between mr-5 ml-5'>   
-        <h1  className='text-2xl hover:font-bold hover:cursor-pointer'>My Poject Title</h1>
-        <ul className='flex gap-10'>
-            <li className='hover:underline hover:cursor-pointer'>About</li>
-            <li className='hover:underline hover:cursor-pointer'>Experience</li>
-            <li className='hover:underline hover:cursor-pointer'>Projects</li>
+const code = `<div className='bg-rose-300 w-full p-5 flex justify-between'>
+    <h1 className='ml-10 text-2xl font-bold hover:underline cursor-pointer hover:-translate-y-1 duration-300'>My Title</h1>
+    <nav>
+        <ul className='flex gap-10 mr-10'>
+            <li className='text-lg hover:font-semibold hover:underline cursor-pointer hover:-translate-y-1 duration-300'>About</li>
+            <li className='text-lg hover:font-semibold hover:underline cursor-pointer hover:-translate-y-1 duration-300'>Projects</li>
+            <li className='text-lg hover:font-semibold hover:underline cursor-pointer hover:-translate-y-1 duration-300'>Contact</li>
         </ul>
     </nav>
-</div>`
+</div> `
 
 export default function  NavBar() {
   return (
