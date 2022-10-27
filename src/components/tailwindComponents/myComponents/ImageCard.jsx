@@ -7,7 +7,7 @@ export default function ImageCard() {
     return (
         <div id="imgCard">
         <Block
-        title="Image only Card"x
+        title="Image only Card"
         code={code}
         language="jsx"
         />

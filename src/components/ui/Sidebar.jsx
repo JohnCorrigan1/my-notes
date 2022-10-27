@@ -6,6 +6,9 @@ import ImageCard from '../tailwindComponents/myComponents/ImageCard'
 import Modal from '../tailwindComponents/myComponents/Modal'
 import NavBar from '../tailwindComponents/myComponents/NavBar'
 import ImageCardWText from '../tailwindComponents/myComponents/ImageCardWText'
+import ImageCardButton from '../tailwindComponents/myComponents/ImageCardButton'
+import TextAnimation from '../tailwindComponents/myComponents/TextAnimation'
+import SlideOutModal from '../tailwindComponents/myComponents/SlideOutModal'
 
 
 export default function Sidebar() {
@@ -20,6 +23,9 @@ export default function Sidebar() {
                 <NavBar />
                 <ImageCard />
                 <ImageCardWText />
+                <ImageCardButton />
+                <TextAnimation />
+                <SlideOutModal />
 
            
                     <HashLink to="#top" smooth>
@@ -38,6 +44,9 @@ export default function Sidebar() {
                         <li><HashLink to="#nav" smooth className='bg-base-100 hover:bg-base-200'>Nav Bar</HashLink></li>
                         <li><HashLink to="#imgCard" smooth className='bg-base-100 hover:bg-base-200'>Image only Card</HashLink></li>
                         <li><HashLink to="#imgCardText" smooth className='bg-base-100 hover:bg-base-200'>Image Card With Text</HashLink></li>
+                        <li><HashLink to="#imgCardButton" smooth className='bg-base-100 hover:bg-base-200'>Image Card With Button</HashLink></li>
+                        <li><HashLink to="#textAnimation" smooth className='bg-base-100 hover:bg-base-200'>Heading Text Animation</HashLink></li>
+                        <li><HashLink to="#slideOutModal" smooth className='bg-base-100 hover:bg-base-200'>SlideOutModal</HashLink></li>
                     </ul>
                
             </div>
